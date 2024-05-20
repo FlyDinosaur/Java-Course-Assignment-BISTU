@@ -1,4 +1,4 @@
-package top.flydinosaur.experiments.experiment_2;
+package top.flydinosaur.experiments.experiment_2.experiment_2_1;
 
 import java.util.Arrays;
 import java.util.Scanner;
