@@ -6,23 +6,17 @@ import java.util.List;
 public class Experiment_2_4 {
 
     public static void main(String[] args) {
-
         try {
             Student s1 = new Student("1", "张三", 18, "男");
             Student s2 = new Student("2", "李四", 19, "女");
-
             Teacher t1 = new Teacher("111", "王五", 45, "男");
-
             Course c1 = new Course("高等数学");
             Course c2 = new Course("面向对象技术");
-
             t1.addCourse(c1);
             t1.addCourse(c2);
-
             s1.enrollCourse(c1);
             s2.enrollCourse(c1);
             s1.enrollCourse(c2);
-
             s1.viewEnrolledCourses();
             System.out.println("-----------------------------------");
             s2.viewEnrolledCourses();
@@ -33,14 +27,15 @@ public class Experiment_2_4 {
             System.out.println("-----------------------------------");
             c2.viewCourseDetails();
             System.out.println("-----------------------------------");
-
         } catch (CourseLimitException e) {
             System.out.println(e.getMessage());
         } catch (DuplicateCourseException e) {
             System.out.println(e.getMessage());
         }
     }
+
 }
+
 
 class CourseLimitException extends Exception {
     public CourseLimitException(String message) {
@@ -150,9 +145,12 @@ class Teacher extends Person {
         return courses;
     }
 
-    public void addCourse(Course course) throws CourseLimitException {
+    public void addCourse(Course course) throws CourseLimitException, DuplicateCourseException {
         if (courses.size() >= 3) {
             throw new CourseLimitException("一个老师不能授课超过三门！");
+        }
+        if (courses.contains(course)) {
+            throw new DuplicateCourseException("该老师已教授这门课，不能重复教授");
         }
         courses.add(course);
         course.setTeacher(this);
