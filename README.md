@@ -11,3 +11,11 @@ This project is an after-class assignment for the Object-Oriented Technology cou
 ## Author
 
 FlyDinosaur
+
+## Translations
+
+For more information, please refer to the translated versions of this document:
+
+- [中文](readme_files/zh_cn.md)
+- [Русская](readme_files/ru_ru.md)
+- [日本語](readme_files/ja_jp.md)
