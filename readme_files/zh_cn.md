@@ -1,6 +1,6 @@
 # Java课程作业-BISTU
 
-这个项目是北京信息科技大学 (BISTU) 面向面向对象技术课程的课后作业。由 FlyDinosaur 编写。
+这个项目是北京信息科技大学 (BISTU) 面向对象技术课程的课后作业。由 FlyDinosaur 编写。
 
 ## 免责声明
 
