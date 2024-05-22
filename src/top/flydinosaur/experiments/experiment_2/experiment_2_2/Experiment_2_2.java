@@ -61,10 +61,10 @@ class Trolly {
 }
 
 class Good {
-    protected String name;
-    protected double unitPrice;
-    protected double discount;
-    protected double amount;
+    private String name;
+    private double unitPrice;
+    private double discount;
+    private double amount;
 
     public Good() {
         discount = 1;
@@ -81,6 +81,37 @@ class Good {
         return unitPrice * discount * amount;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
 }
 
 class Fruit extends Good {
@@ -94,7 +125,7 @@ class Fruit extends Good {
 
     @Override
     public String toString() {
-        return name + "\t产地=" + origin + "\t单价(元/公斤)=" + unitPrice + "\t折扣=" + discount + "\t重量(公斤)=" + amount + "\n";
+        return super.getName() + "\t产地=" + origin + "\t单价(元/公斤)=" + super.getUnitPrice() + "\t折扣=" + super.getDiscount() + "\t重量(公斤)=" + super.getAmount() + "\n";
     }
 
 }
@@ -109,7 +140,7 @@ class Drink extends Good {
 
     @Override
     public String toString() {
-        return name + "\t品牌=" + breed + "\t单价(元/瓶)=" + unitPrice + "\t折扣=" + discount + "\t数量(瓶)" + amount + "\n";
+        return super.getName() + "\t品牌=" + breed + "\t单价(元/瓶)=" + super.getUnitPrice() + "\t折扣=" + super.getDiscount() + "\t数量(瓶)" + super.getAmount() + "\n";
     }
 
 }
