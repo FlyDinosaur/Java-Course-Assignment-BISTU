@@ -7,6 +7,8 @@ public class Experiment_2_4 {
 
     public static void main(String[] args) {
         try {
+            //正常情况下的测试代码：
+
             Student s1 = new Student("1", "张三", 18, "男");
             Student s2 = new Student("2", "李四", 19, "女");
             Teacher t1 = new Teacher("111", "王五", 45, "男");
@@ -27,6 +29,42 @@ public class Experiment_2_4 {
             System.out.println("-----------------------------------");
             c2.viewCourseDetails();
             System.out.println("-----------------------------------");
+
+            //选课人数超过60人情况下的测试类代码（需要使用时把其他情况的代码注释掉，并取消下列代码的注释）：
+
+//            Course c1 = new Course("高等数学");
+//            Student[] students = new Student[60];
+//            for (int i = 0; i < students.length; i++) {
+//                students[i] = new Student("test" + i, "test" + (i+1), i, "test");
+//                students[i].enrollCourse(c1);
+//            }
+//            Student errorStudent = new Student("test60", "test61", 11, "test");
+//            errorStudent.enrollCourse(c1);
+//            c1.viewCourseDetails();
+
+            //教师教授课程数量超过3门情况下的测试类代码（需要使用时把其他情况的代码注释掉，并取消下列代码的注释）：
+
+//            Course c1 = new Course("高等数学");
+//            Course c2 = new Course("离散数学");
+//            Course c3 = new Course("面向对象技术java");
+//            Course c4 = new Course("程序设计基础C语言");
+//            Teacher[] teachers = new Teacher[3];
+//            Teacher errorTeacher = new Teacher("Test", "Test", 20, "unKnow");
+//            errorTeacher.addCourse(c1);
+//            errorTeacher.addCourse(c2);
+//            errorTeacher.addCourse(c3);
+//            errorTeacher.addCourse(c4);
+//            c1.viewCourseDetails();
+
+            //学生重复选一门课情况下的测试类代码（需要使用时把其他情况的代码注释掉，并取消下列代码的注释）：
+
+//            Course c1 = new Course("高等数学");
+//            Student student = new Student("test", "test", 18, "unKnow");
+//            student.enrollCourse(c1);
+//            student.enrollCourse(c1);
+
+
+
         } catch (CourseLimitException e) {
             System.out.println(e.getMessage());
         } catch (DuplicateCourseException e) {
