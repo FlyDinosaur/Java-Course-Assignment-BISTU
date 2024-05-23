@@ -1,40 +1,4 @@
-package top.flydinosaur.homeworks.homework_12;
-
-//  一个公司（Company）包含若干员工（Worker），员工每月领取工资，公司能够计算每个月付给员工的工资总和，两个类具体说明如下
-//  1)Worker类
-//  a)一个私有的name属性存放员工的姓名；
-//  b)一个私有的sal属性存放员工的工资；
-//  c)一个公有的不带参数的构造方法；
-//  d)一个共有的带参数的构造方法；
-//  e)name和sal属性的set方法和get方法；
-//  f)一个公有的toString()方法，返回员工的姓名和工资
-
-//  (2) Company类
-//  a) 一个私有的name属性存放公司的名称；
-//  b) 一个私有的ArrayList<Worker>类型的workers属性存放公司员工；
-//  c) 一个无参的和一个有参的构造方法；
-//  d) 两个属性的set和get方法；
-//  e) 一个公有的添加员工的方法addWorker( );
-//  f) 一个公有的earnings()方法，用于计算所有员工每个月的总工资；
-//  g) 一个公有的toString()方法，用于返回公司所有员工的姓名和工资信息
-
-//import java.util.Scanner;
-//public class TestCompanyWorker {
-//    public static void main(String[] args){
-//        Scanner scanner = new Scanner(System.in);
-//        Worker worker1 = new Worker(scanner.next(), scanner.nextDouble());
-//        Worker worker2 = new Worker(scanner.next(), scanner.nextDouble());
-//        Worker worker3 = new Worker(scanner.next(), scanner.nextDouble());
-//        Company company = new Company();
-//        //补充代码1：把worker1、worker2和worker3添加到company对象中
-//
-//        System.out.println("姓名\t\t" + "工资");
-//        System.out.println("-------------------------");
-//        System.out.println(company.toString());
-//        //补充代码2：按照样例输出公司每个月的总工资
-//
-//    }
-//}
+package top.flydinosaur.homeworks.homework_12.homework_12_2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
