@@ -3,7 +3,7 @@ package top.flydinosaur.homeworks.homework_12.homework_12_2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class homework_12_2 {
+public class Homework_12_2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
