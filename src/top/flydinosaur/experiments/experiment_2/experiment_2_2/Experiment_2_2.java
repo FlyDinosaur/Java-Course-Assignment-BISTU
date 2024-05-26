@@ -140,7 +140,7 @@ class Drink extends Good {
 
     @Override
     public String toString() {
-        return super.getName() + "\t品牌=" + breed + "\t单价(元/瓶)=" + super.getUnitPrice() + "\t折扣=" + super.getDiscount() + "\t数量(瓶)" + super.getAmount() + "\n";
+        return super.getName() + "\t品牌=" + breed + "\t单价(元/瓶)=" + super.getUnitPrice() + "\t折扣=" + super.getDiscount() + "\t数量(瓶)=" + super.getAmount() + "\n";
     }
 
 }
