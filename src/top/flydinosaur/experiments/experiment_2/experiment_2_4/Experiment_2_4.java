@@ -9,26 +9,34 @@ public class Experiment_2_4 {
         try {
             //正常情况下的测试代码：
 
-            Student s1 = new Student("1", "张三", 18, "男");
-            Student s2 = new Student("2", "李四", 19, "女");
-            Teacher t1 = new Teacher("111", "王五", 45, "男");
-            Course c1 = new Course("高等数学");
-            Course c2 = new Course("面向对象技术");
+            Student s1 = new Student("1", "张三", 20, "M");
+            Student s2 = new Student("2", "李四", 19, "F");
+            Teacher t1 = new Teacher("101", "刘老师", 50, "F");
+            Course c1 = new Course("面向对象技术");
+            Course c2 = new Course("Java程序设计");
+            Course c3 = new Course("C语言程序设计");
+
+            s1.enrollCourse(c1);
+            s1.enrollCourse(c2);
+            s2.enrollCourse(c1);
             t1.addCourse(c1);
             t1.addCourse(c2);
-            s1.enrollCourse(c1);
-            s2.enrollCourse(c1);
-            s1.enrollCourse(c2);
-            s1.viewEnrolledCourses();
-            System.out.println("-----------------------------------");
-            s2.viewEnrolledCourses();
-            System.out.println("-----------------------------------");
-            t1.viewTeachingCourses();
-            System.out.println("-----------------------------------");
+            t1.addCourse(c3);
+
             c1.viewCourseDetails();
-            System.out.println("-----------------------------------");
-            c2.viewCourseDetails();
-            System.out.println("-----------------------------------");
+            System.out.println();
+            s1.viewEnrolledCourses();
+            System.out.println();
+            t1.viewTeachingCourses();
+            System.out.println();
+            c1.viewEnrolledStudents();
+            System.out.println();
+            s1.dropCourse(c1);
+            System.out.println();
+            c1.viewCourseDetails();
+            System.out.println();
+            s1.viewEnrolledCourses();
+
 
             //选课人数超过60人情况下的测试类代码（需要使用时把其他情况的代码注释掉，并取消下列代码的注释）：
 
@@ -66,9 +74,9 @@ public class Experiment_2_4 {
 
 
         } catch (CourseLimitException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         } catch (DuplicateCourseException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -153,15 +161,18 @@ class Student extends Person {
     }
 
     public void dropCourse(Course course) {
+        System.out.println(getName() + "同学取消了《" + course.getCourseName() + "》课程！");
         courses.remove(course);
         course.removeStudent(this);
     }
 
     public void viewEnrolledCourses() {
-        System.out.println(getName() + "选的课程有:");
+        System.out.println(getName() + "同学的基本信息：\n学号：" + getId() + "\n姓名：" + getName() + ", 年龄：" + getAge() + ", 性别:" + getGender());
+        System.out.print("选修的课程有：");
         for (Course course : courses) {
-            System.out.println(course.getCourseName());
+            System.out.print(course.getCourseName() + "\t");
         }
+        System.out.println();
     }
 }
 
@@ -185,7 +196,7 @@ class Teacher extends Person {
 
     public void addCourse(Course course) throws CourseLimitException, DuplicateCourseException {
         if (courses.size() >= 3) {
-            throw new CourseLimitException("一个老师不能授课超过三门！");
+            throw new CourseLimitException("一个教师不能授课超过3门");
         }
         if (courses.contains(course)) {
             throw new DuplicateCourseException("该老师已教授这门课，不能重复教授");
@@ -200,10 +211,12 @@ class Teacher extends Person {
     }
 
     public void viewTeachingCourses() {
-        System.out.println(getName() + "教授的课为:");
+        System.out.println(getName() + "的基本信息:\n工号:" + getTeacherId() + "\n姓名：" + getName() + ", 年龄：" + getAge() + "， 性别：" + getGender());
+        System.out.print("教授的课程：");
         for (Course course : courses) {
-            System.out.println(course.getCourseName());
+            System.out.print(course.getCourseName() + "\t");
         }
+        System.out.println();
     }
 }
 
@@ -245,15 +258,24 @@ class Course {
     }
 
     public void viewCourseDetails() {
-        System.out.println("课程名: " + courseName);
+        System.out.println("《" + courseName + "》课程的基本信息\n课程名称：" + courseName);
         if (teacher != null) {
             System.out.println("授课教师: " + teacher.getName());
         } else {
             System.out.println("该课程暂时无人授课！");
         }
-        System.out.println("选了这门课的同学有:");
+        System.out.print("选课学生：");
         for (Student student : students) {
-            System.out.println(student.getName());
+            System.out.print(student.getName() + "\t");
         }
+        System.out.println();
+    }
+
+    public void viewEnrolledStudents() {
+        System.out.print("《" + courseName + "》课程的学生名单：");
+        for (Student student : students) {
+            System.out.print(student.getName() + "\t");
+        }
+        System.out.println();
     }
 }
