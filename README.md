@@ -1,6 +1,6 @@
 # Java-Course-Assignment-BISTU
 
-This project is an after-class assignment for the Object-Oriented Technology course at Beijing Information Science & Technology University (BISTU). It was written by FlyDinosaur.
+This project is an after-class assignment for the Object-Oriented Technology course at Beijing Information Science & Technology University (BISTU), written by FlyDinosaur.
 
 ## Disclaimer
 
