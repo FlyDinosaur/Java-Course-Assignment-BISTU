@@ -21,6 +21,6 @@ For more information, please refer to the translated versions of this document:
 - [日本語](readme_files/ja_jp.md)
 
 ## Contributer
-<a href="https://github.com/Bistu-OSSDT-2024/23-FOSA_BM/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Bistu-OSSDT-2024/23-FOSA_BM" />
+<a href="https://github.com/FlyDinosaur/Java-Course-Assignment-BISTU/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FlyDinosaur/Java-Course-Assignment-BISTU" />
 </a>
