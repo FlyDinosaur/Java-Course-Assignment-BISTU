@@ -19,3 +19,8 @@ For more information, please refer to the translated versions of this document:
 - [中文](readme_files/zh_cn.md)
 - [Русская](readme_files/ru_ru.md)
 - [日本語](readme_files/ja_jp.md)
+
+## Contributer
+<a href="https://github.com/Bistu-OSSDT-2024/23-FOSA_BM/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Bistu-OSSDT-2024/23-FOSA_BM" />
+</a>
